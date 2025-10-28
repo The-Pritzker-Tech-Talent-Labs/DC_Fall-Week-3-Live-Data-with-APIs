@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API & Dynamic Data Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col items-center">
+  <main class="max-w-5xl w-full p-6" x-data="apiApp()" x-init="loadData()">
+    <h1 class="text-3xl font-bold text-center mb-2" x-text="title"></h1>
+    <p class="text-center text-gray-600 mb-6" x-text="tagline"></p>
+
+    <!-- This is the output div where the data will be displayed -->
+    <div id="output" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
+    
+    <!-- This button is used to refresh the data -->
+    <button @click="loadData()" class="mt-8 px-6 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+      🔄 Refresh
+    </button>
+  </main>
+
+  <!-- The script below points to our dogApi.js file -->
+  <!-- You can change the script to point to a different API file -->
+  <script src="scripts/dogApi.js"></script>
+</body>
+</html>
