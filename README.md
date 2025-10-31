@@ -148,10 +148,25 @@ Choose one for your custom project:
 ## 🔗 Helpful References
 
 **API Documentation**  
-- [Dog API](https://dog.ceo/dog-api/) — simple image API  
-- [PokéAPI](https://pokeapi.co/) — comprehensive Pokémon data  
-- [REST Countries](https://restcountries.com/) — country information  
-- [Quotable API](https://github.com/lukePeavey/quotable) — inspirational quotes
+## 🧠 Beginner-Friendly Visual APIs
+
+These APIs work **without keys** and are perfect for learning to make API calls that return images, text, or interesting structured data.
+
+
+
+
+## 🧩 API Explorer Project — Verified Endpoints & Ideas
+
+| **API** | **Description** | **Example Endpoint(s)** | **Student Input / Interaction** | **What to Use / Explore from Response** |
+|:---|:---|:---|:---|:---|
+| 🐶 [Dog API](https://dog.ceo/dog-api/) | Returns random dog images or by breed. | 1️⃣ `https://dog.ceo/api/breeds/image/random` <br>2️⃣ `https://dog.ceo/api/breed/husky/images/random` <br>3️⃣ `https://dog.ceo/api/breeds/list/all` | Let students: <br>– Select or type a breed (use list endpoint). <br>– Request multiple images: `/random/3`. | – `message`: image URL(s) <br>– Count how many images returned <br>– Display breed name as title. |
+| ⚡ [PokéAPI](https://pokeapi.co/) | Pokémon data including name, types, abilities, sprites, and stats. | 1️⃣ `https://pokeapi.co/api/v2/pokemon/pikachu` <br>2️⃣ `https://pokeapi.co/api/v2/pokemon/25` <br>3️⃣ `https://pokeapi.co/api/v2/type/electric` | Input Pokémon name or ID.<br>Let them toggle between text input or dropdown.<br>Extra challenge: fetch multiple Pokémon and compare stats. | – `name` <br>– `sprites.front_default`, `sprites.back_default`, `sprites.other["official-artwork"].front_default` <br>– `types[].type.name` <br>– `stats[].base_stat` → show as table or bar chart <br>– `abilities[].ability.name` |
+| 🐱 [Cat API](https://thecatapi.com/) | Random cat images and breed info. | 1️⃣ `https://api.thecatapi.com/v1/images/search` <br>2️⃣ `https://api.thecatapi.com/v1/images/search?limit=3` <br>3️⃣ `https://api.thecatapi.com/v1/breeds` | Optional: let user choose `limit` (number of cats) or select a `breed_id` from list. | – `[0].url` → image <br>– `[0].breeds[0].name` + `temperament` (if available) <br>– Students can count words in temperament string or group by origin. |
+| 🦆 [Duck API](https://random-d.uk/api) | Returns random duck photos or gifs. | 1️⃣ `https://random-d.uk/api/random` <br>2️⃣ `https://random-d.uk/api/v2/random` | Simple button click to fetch new duck. <br>Can add toggle for “static” vs “gif”. | – `url` → image <br>– `message` (optional) <br>– Let students show last 5 ducks fetched (array practice). |
+| 🖼️ [Art Institute of Chicago](https://api.artic.edu/docs/) | Public art data with titles, artist info, and IIIF images. | 1️⃣ `https://api.artic.edu/api/v1/artworks` <br>2️⃣ `https://api.artic.edu/api/v1/artworks/129884` <br>3️⃣ `https://api.artic.edu/api/v1/artworks/search?q=chicago` | Let user: <br>– Enter keyword (e.g. “sunflower”). <br>– Or choose from a few artwork IDs. | – `data[].title`, `artist_display`, `date_display`, `medium_display` <br>– Construct image URL: `https://www.artic.edu/iiif/2/{image_id}/full/843,/0/default.jpg` <br>– Compare artist count, or filter by date. |
+| 🎵 [Lyrics.ovh](https://lyricsovh.docs.apiary.io/) | Fetch lyrics by artist and song title. | 1️⃣ `https://api.lyrics.ovh/v1/Adele/Hello` <br>2️⃣ `https://api.lyrics.ovh/v1/Drake/Gods%20Plan` | Form with two fields: Artist + Song Title.<br>Show lyrics text in scrollable box. | – `lyrics` (multiline string) <br>– Count lines or word frequency <br>– Highlight user-typed word in lyrics. |
+| 🍫 [Open Food Facts](https://world.openfoodfacts.org/data) | Product and nutrition data by barcode. | 1️⃣ `https://world.openfoodfacts.net/api/v2/product/2840058987` <br>2️⃣ `https://world.openfoodfacts.net/api/v2/product/737628064502` | Input or select barcode. <br>Compare 2 products (e.g., candy vs cereal). | – `product.product_name` <br>– `product.brands` <br>– `product.nutrition_grades_tags[0]` <br>– `product.nutriments.sugars_100g` etc. <br>– `product.selected_images.front.display.en` (image). |
+
 
 **JavaScript & Frameworks**  
 - [Async/Await Guide](https://javascript.info/async-await) — essential for API work  
@@ -207,6 +222,29 @@ Choose one for your custom project:
 - "Why am I getting an error?"
 
 > Always **test** AI suggestions one step at a time and make sure you understand what the code does.
+
+---
+## 🧱 Add Your Week 3 Project to Your Portfolio
+
+You now have another live project 🎉
+Add a new project card to the portfolio page you created in Week 1.
+
+Open your Week 1 repo and find index.html.
+
+Duplicate one of your existing cards and update the details:
+
+
+``` html
+<h1 class="text-2xl font-bold text-purple-600">API & Dynamic Data</h1>
+<p class="mt-2 text-gray-600">Week 3 Project — Fetching and displaying live data</p>
+<a
+  href="https://YOUR-USERNAME.github.io/week-3-software-engineering-apis"
+  target="_blank"
+  class="mt-4 inline-block rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+>
+  View Project
+</a>
+```
 
 ---
 
