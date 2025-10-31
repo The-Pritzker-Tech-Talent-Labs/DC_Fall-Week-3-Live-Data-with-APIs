@@ -6,11 +6,10 @@ function apiApp() {
       const out = document.getElementById("output");
       out.innerHTML = "<p>Loading...</p>";
       try {
-        // STEP 1: Look at https://dog.ceo/api/breeds/image/random/3
-        // STEP 2: Add URL below
-        // const res = await axios.get(Url);
-        // STEP 3: console.log(res.data)
-        // STEP 4: 
+        // Fetch 3 random dog images
+        const res = await axios.get("https://dog.ceo/api/breeds/image/random/3");
+        console.log(res.data);
+        // Render the images from the message array
         this.render(res.data.message);
       } catch (err) {
         out.innerHTML = `<p class='text-red-600'>Something went wrong 😢</p>`;

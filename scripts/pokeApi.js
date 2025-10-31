@@ -6,12 +6,23 @@ function apiApp() {
       const out = document.getElementById("output");
       out.innerHTML = "<p>Loading Pokémon...</p>";
       try {
-        // STEP 1: Visit https://pokeapi.co/api/v2/pokemon?limit=3
-        // STEP 2: Add endpoint
-        // const res = await axios.get("YOUR_URL_HERE");
-        // STEP 3: Identify res.data.results
-        // STEP 4: const details = await Promise.all(...)
-        // STEP 5: this.render(details);
+        // Step 1: Fetch list of 3 Pokémon (this only gives us names and URLs)
+        const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=3");
+        console.log(res.data);
+        
+        // Step 2: Fetch full details for each Pokémon
+        // Promise.all lets us wait for multiple API calls to finish at the same time
+        // This is faster than waiting for each one separately
+        const details = await Promise.all(
+          res.data.results.map(pokemon => axios.get(pokemon.url))
+        );
+        
+        // Step 3: Extract just the data from each response (we only need .data)
+        const pokemonData = details.map(detail => detail.data);
+        console.log(pokemonData);
+        
+        // Step 4: Render the Pokémon with their details
+        this.render(pokemonData);
       } catch (err) {
         out.innerHTML = `<p class='text-red-600'>Error loading Pokémon ⚠️</p>`;
         console.error(err);
