@@ -1,7 +1,7 @@
 function apiApp() {
   return {
-    title: "🍫 Nutrition API Project",
-    tagline: "Search for food products by barcode!",
+    title: "🍫Snack Vending Machine",
+    tagline: "Click refresh to get a random snack!",
     async loadData() {
       const out = document.getElementById("output");
       out.innerHTML = "<p>Loading...</p>";

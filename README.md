@@ -9,11 +9,14 @@ You'll learn to fetch live data, handle asynchronous operations, and create resp
 
 - `index.html` — main project page with AlpineJS setup
 - `api_example.html` — complete Studio Ghibli API example  
-- `scripts/` — three guided JavaScript files:
-  - `dogApi.js` — simple image fetching (Part 1)
-  - `pokeApi.js` — nested API calls (Part 2) 
-  - `customApi.js` — your choice from curated list (Part 3)
+- `scripts/` — guided JavaScript files:
+  - `@dogApi.js` — simple image fetching (Part 1)
+  - `@pokeApi.js` — nested API calls (Part 2) 
+  - `@customApi.js` — your choice from curated list (Part 3)
+  - `scripts/advanced/` — 10 progressive lesson levels (see Advanced Levels section below)
 - `SETUP.md` — detailed step-by-step instructions for each part
+
+**Note:** Files with `@` prefix are the working versions you'll complete. Answer keys are in separate branches.
 
 ---
 
@@ -55,7 +58,7 @@ Follow these guided steps to connect your web page to real API data:
 
 ### 🐶 Part 1 — Dog API
 1️⃣ Open https://dog.ceo/api/breeds/image/random/3 and inspect JSON  
-2️⃣ Add that URL to `axios.get()` in `scripts/dogApi.js`  
+2️⃣ Add that URL to `axios.get()` in `scripts/@dogApi.js`  
 3️⃣ Log the data and locate `message`  
 4️⃣ Render those images on the page  
 5️⃣ Test: Change `/3` to `/6` — see what happens!
@@ -63,13 +66,13 @@ Follow these guided steps to connect your web page to real API data:
 ### 🎮 Part 2 — PokéAPI
 1️⃣ Open https://pokeapi.co/api/v2/pokemon?limit=3  
 2️⃣ Identify structure and nested URLs  
-3️⃣ Fetch details and render names + images  
+3️⃣ Fetch details and render names + images in `scripts/@pokeApi.js`
 4️⃣ Discuss: Why do we need loops?
 
 ### 🌍 Part 3 — Your Own API
 1️⃣ Choose one from the API list below  
 2️⃣ Inspect structure → choose fields  
-3️⃣ Fetch and render meaningful data  
+3️⃣ Fetch and render meaningful data in `scripts/@customApi.js`
 4️⃣ Commit + deploy when done
 
 ---
@@ -260,6 +263,44 @@ Duplicate one of your existing cards and update the details:
 ---
 
 **🌟 Next Steps:** Try changing the colors, adding more APIs to the same page, or showing different data from the same API!
+
+---
+
+## 🚀 Advanced Levels (10 Progressive Lessons)
+
+Ready to go deeper? The `scripts/advanced/` folder contains 10 progressive lessons that build on each other, teaching you advanced API concepts step by step.
+
+### 📚 What You'll Learn
+
+Each level introduces 1-2 new concepts while building on previous lessons:
+
+| Level | Concepts | File Location |
+|-------|----------|---------------|
+| **1** | Basic API calls, dot notation, array mapping | `scripts/advanced/1/@dogApi.js` |
+| **2** | Nested objects, conditional checks | `scripts/advanced/2/@catApi.js` |
+| **3** | Multiple properties, complex templates | `scripts/advanced/3/@ghibliApi.js` |
+| **4** | User input (prompt), string methods | `scripts/advanced/4/@dogApiByName.js` |
+| **5** | Multiple API calls, Promise.all() | `scripts/advanced/5/@pokeApi.js` |
+| **6** | Complex nested data, calculations | `scripts/advanced/6/@pokeApiByName.js` |
+| **7** | Optional chaining (?.), fallback values | `scripts/advanced/7/@nutritionApi.js` |
+| **8** | Multiple inputs, URL encoding, error handling | `scripts/advanced/8/@lyricsApi.js` |
+| **9** | Type checking, URL building, advanced patterns | `scripts/advanced/9/@artInstituteApi.js` |
+| **10** | Multi-API mashups, creative projects | `scripts/advanced/10/@customApi.js` |
+
+### 🎯 How to Use Advanced Levels
+
+1. **Complete Parts 1-3 first** - Make sure you understand the basics
+2. **Start with Level 1** - Open `scripts/advanced/1/@dogApi.js`
+3. **Read the header comments** - Each file explains what you'll learn
+4. **Complete the TODOs** - Fill in the missing code pieces
+5. **Test your work** - Update `index.html` to reference your script
+6. **Progress sequentially** - Each level builds on the previous one
+
+### 📖 Detailed Guide
+
+See `scripts/advanced/README.md` for a complete overview of all 10 levels, learning objectives, and tips for success.
+
+**Note:** These lessons are designed for students who have completed the main 3 parts and want to dive deeper into API concepts. Each level includes detailed comments explaining concepts and step-by-step TODOs to guide your learning.
 
 ---
 
